@@ -220,7 +220,7 @@
   <properties>
     <!-- make sure to update these for each release! -->
     <log4jParentDir>${basedir}</log4jParentDir>
-    <Log4jReleaseVersion>2.17.2</Log4jReleaseVersion>
+    <Log4jReleaseVersion>2.17.2-rxlogix-1</Log4jReleaseVersion>
     <Log4jReleaseVersionJava7>2.12.4</Log4jReleaseVersionJava7>
     <Log4jReleaseVersionJava6>2.3.2</Log4jReleaseVersionJava6>
     <Log4jReleaseManager>Ralph Goers</Log4jReleaseManager>
@@ -1603,12 +1603,11 @@
     </plugins>
   </reporting>
   <distributionManagement>
-    <downloadUrl>https://logging.apache.org/log4j/2.x/download.html</downloadUrl>
-    <!-- site is only included to make maven-site-plugin stop complaining -->
-    <site>
-      <id>www.example.com</id>
-      <url>scp://www.example.com/www/docs/project/</url>
-    </site>
+    <repository>
+      <id>RXLOGIX-thirdparty</id>
+      <name>RXLogix Thirdparty Repository</name>
+      <url>http://10.100.21.16:8080/repository/thirdparty</url>
+    </repository>
   </distributionManagement>
   <modules>
     <module>log4j-api-java9</module>
